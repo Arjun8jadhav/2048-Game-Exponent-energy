@@ -1,0 +1,40 @@
+@use '../styles/variables' as *;
+
+.board {
+	display: grid;
+	gap: $grid-gap;
+	background: $board-bg;
+	padding: $grid-gap;
+	border-radius: 12px;
+	box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+	/* Responsive width: cap at 70% of viewport, shrink on small screens */
+	width: 100%;
+	margin: 0 auto;
+}
+
+.cell {
+	position: relative;
+	background: $tile-empty;
+	border-radius: $tile-radius;
+	height: clamp(64px, 12vw, 96px);
+}
+
+.tile {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-weight: 800;
+	font-size: clamp(18px, 4vw, 28px);
+	border-radius: $tile-radius;
+	transition: transform 120ms ease, background 200ms ease, color 200ms ease;
+	transform: scale(1.0);
+	&:active { transform: scale(0.98); }
+}
+
+@each $value, $pair in $tile-map {
+	.tile-#{$value} { @include tile-colors($value); }
+}
+
+

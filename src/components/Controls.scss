@@ -1,0 +1,58 @@
+@use '../styles/variables' as *;
+
+.container-fds{
+	display: flex;
+}
+
+.controls {
+	display: grid;
+	gap: 12px;
+	justify-items: center;
+}
+
+.size-control {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+.size-control select {
+	padding: 6px 8px;
+	border-radius: 6px;
+	border: 1px solid rgba(0,0,0,0.15);
+	background: #fff;
+}
+
+.buttons {
+	display: grid;
+	grid-template-rows: auto auto auto;
+	gap: 8px;
+}
+
+.hgroup {
+	display: grid;
+	grid-auto-flow: column;
+	gap: 8px;
+}
+
+button {
+	background: #8f7a66;
+	color: #fff;
+	border: none;
+	padding: 8px 12px;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 700;
+	box-shadow: 0 2px 0 rgba(0,0,0,0.15);
+	transition: transform 80ms ease, filter 120ms ease;
+	&:hover { filter: brightness(1.05); }
+	&:active { transform: translateY(1px); }
+}
+
+.restart {
+	background: #edc22e;
+	color: #fff;
+}
+
+
+

@@ -1,0 +1,37 @@
+@use './variables' as *;
+
+
+
+html, body, #root {
+    width: 98vw;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+	margin: 0;
+	font-family: $font-family;
+	background: linear-gradient(180deg, #f7f2e7, #f0ead6);
+	color: $tile-color;
+}
+
+.app-shell {
+	margin: 40px auto;
+	padding: 16px;
+}
+
+.title {
+	margin: 0 0 12px;
+	font-weight: 800;
+	letter-spacing: 0.5px;
+}
+
+.subtitle {
+	margin: 0 0 16px;
+	opacity: 0.7;
+}
+
+
+.fds-container{
+	display: flex;
+}
